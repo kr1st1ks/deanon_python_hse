@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализ IP</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/analyze.css">
+</head>
+<body>
+<div class="container">
+    <div class="left-panel">
+        <div class="ip-label">Ваш IP-адрес:</div>
+        <div class="ip-value">
+            <span id="ip-address">...</span>
+            <button id="copy-ip-btn" title="Скопировать IP"><i class="fas fa-copy"></i></button>
+        </div>
+        <ul class="action-list">
+            <li><a href="#" id="copy-result-btn"><i class="fas fa-copy"></i> Скопировать результат</a></li>
+            <li><a href="#" id="download-json-btn"><i class="fas fa-download"></i> Скачать JSON</a></li>
+        </ul>
+    </div>
+    <div class="right-panel">
+        <ul class="info-list">
+            <li><i class="fas fa-desktop"></i> <span class="label">Имя вашего компьютера:</span> <span class="value"
+                                                                                                       id="hostname-value">...</span>
+            </li>
+            <li><i id="os-icon" class="fas fa-desktop"></i> <span class="label">Операционная система:</span> <span
+                    class="value" id="os-value">...</span></li>
+            <li><i class="fas fa-map-marker-alt"></i> <span class="label">Ваше местоположение:</span> <span
+                    class="value" id="location-value">...</span></li>
+            <li><i class="fas fa-building"></i> <span class="label">Ваш провайдер:</span> <span class="value"
+                                                                                                id="provider-value">...</span>
+            </li>
+            <li><i class="fas fa-lock"></i> <span class="label">VPN:</span> <span class="value"
+                                                                                  id="vpn-value">...</span></li>
+            <li><i class="fas fa-user-secret"></i> <span class="label">Tor:</span> <span class="value" id="tor-value">...</span>
+            </li>
+            <li><i class="fas fa-network-wired"></i> <span class="label">Открытые порты:</span> <span class="value"
+                                                                                                      id="ports-value">...</span>
+            </li>
+            <li><i class="fas fa-shield-alt"></i> <span class="label">Безопасность:</span> <span class="value"
+                                                                                                 id="blacklist-value">...</span>
+            </li>
+            <li><i class="fas fa-globe"></i> <span class="label">Утечка DNS:</span> <span class="value"
+                                                                                          id="dnsleak-value">...</span>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="/static/js/analyze.js"></script>
+</body>
+</html>
